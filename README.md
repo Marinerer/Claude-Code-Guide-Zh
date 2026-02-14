@@ -17,6 +17,8 @@
 
 > 🔗 **GitHub仓库**：[https://github.com/KimYx0207/Claude-Code-Guide-Zh](https://github.com/KimYx0207/Claude-Code-Guide-Zh)
 
+这里可加微信群：https://my.feishu.cn/wiki/OhQ8wqntFihcI1kWVDlcNdpznFf
+
 ---
 
 ## 📞 联系方式
