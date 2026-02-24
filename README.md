@@ -211,9 +211,11 @@ Week 6：08-Agent-SDK（完整学习）
 
 **新增内容**
 - 05-Hooks教程新增 3.7 节：WorktreeCreate / WorktreeRemove 工作树管理 Hook 详解
+- 05-Hooks教程新增 `--worktree`（`-w`）内置 Git Worktree 并行任务隔离功能详解（v2.1.49+）
 - 05-Hooks教程 Hook 类型从 6 种扩展至 8 种，术语表和速查表同步更新
-- 01-安装指南新增 4.3.1 节：API中转站配置（ANTHROPIC_BASE_URL 环境变量）
+- 02-基础使用新增 `--worktree`（`-w`）启动参数说明
 - 02-基础使用新增 /fast 快速模式命令说明
+- 01-安装指南新增 4.3.1 节：API中转站配置（ANTHROPIC_BASE_URL 环境变量）
 - README 教程目录同步更新 Hooks 说明（6种→8种含Worktree管理）
 - README 环境要求新增第三方中转站 API Key 说明
 

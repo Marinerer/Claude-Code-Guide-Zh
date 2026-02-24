@@ -1469,7 +1469,7 @@ sys.exit(0)
 
 ### 3.7 WorktreeCreate 和 WorktreeRemove（工作树管理）🆕
 
-> **v2.1+ 新增**：这两个Hook类型是 Claude Code 2.1 版本新增的，用于 Git Worktree（工作树）的生命周期管理。
+> **v2.1.49+ 新增**：这两个Hook类型配合 Claude Code 内置的 Git Worktree 功能使用，用于 Git Worktree（工作树）的生命周期管理。
 
 #### 什么是 Git Worktree？
 
@@ -1556,6 +1556,56 @@ sys.exit(0)
 ```
 
 > ⚠️ **注意**：WorktreeCreate 和 WorktreeRemove 都是**不可阻止**的Hook，它们只用于执行附加操作，不能阻止工作树的创建或删除。
+
+#### 与 `--worktree` 启动参数的关系
+
+> 🔥 **重要**：2026年2月（v2.1.49），Claude Code 正式内置了 Git Worktree 支持，这是一个**核心功能级别**的更新，不仅仅是 Hook。
+
+**`--worktree`（`-w`）启动参数**：
+
+```bash
+# 在独立工作树中启动 Claude Code
+claude --worktree
+# 或简写
+claude -w
+```
+
+**工作原理**：
+
+```
+你的项目仓库（主工作目录）
+├── .git/                    # 共享的 Git 历史
+├── .claude/worktrees/       # 工作树存放目录（加到 .gitignore）
+│   ├── worktree-abc123/     # Agent A 的独立工作目录
+│   └── worktree-def456/     # Agent B 的独立工作目录
+├── src/                     # 主工作目录的文件
+└── ...
+```
+
+**使用场景**：
+
+| 场景 | 说明 |
+|------|------|
+| 并行开发 | 终端1: `claude -w` 开发新功能 / 终端2: `claude -w` 修复 bug |
+| 代码审查 | 主工作目录继续开发,工作树中运行审查 Agent |
+| 实验性修改 | 在工作树中试验方案,不影响主目录 |
+
+**配置步骤**：
+
+```bash
+# 1. 将工作树目录加到 .gitignore
+echo ".claude/worktrees/" >> .gitignore
+
+# 2. 启动第一个 Agent（在工作树中）
+claude -w
+
+# 3. 打开另一个终端，启动第二个 Agent（在另一个工作树中）
+claude -w
+```
+
+**Hook 的角色**：
+- **Git 用户**：直接使用 `claude -w` 即可，Hook 是可选的增强（如自动安装依赖）
+- **非 Git 用户**（SVN/Perforce/Mercurial）：通过 WorktreeCreate/WorktreeRemove Hook 自定义工作树的创建和清理逻辑，替代默认的 Git 行为
 
 ---
 
