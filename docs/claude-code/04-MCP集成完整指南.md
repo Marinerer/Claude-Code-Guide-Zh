@@ -164,7 +164,7 @@ Cursor ──────────┤              数据库 MCP Server
 
 ### 1.2 MCP的发展历程
 
-> 📌 **信息来源**：[MCP官方文档](https://modelcontextprotocol.io/) | [GitHub公告](https://github.com/modelcontextprotocol) | 验证日期：2025-12-22
+> 📌 **信息来源**：[MCP官方文档](https://modelcontextprotocol.io/) | [GitHub公告](https://github.com/modelcontextprotocol) | 验证日期：2026-02-25
 
 | 时间 | 里程碑事件 | 意义 |
 |------|-----------|------|
@@ -351,7 +351,7 @@ claude
 **启动时会看到**：
 
 ```
-Claude Code v2.1.45
+Claude Code v2.1.52
 Working directory: /你的项目路径
 
 MCP servers connected:
@@ -831,11 +831,11 @@ Claude Code：
 
 这是 2026 年初新增的能力——MCP 服务器不再只是返回文本数据，还可以返回可交互的 UI 组件。这意味着你可以在 Claude Code 的对话中直接操作第三方工具的界面，无需切换到外部应用。
 
-#### MCP 工具懒加载（v2.1.45+）
+#### MCP 工具懒加载（v2.1.52+）
 
 > **功能**：延迟加载 MCP 工具定义，减少上下文占用高达 95%
 
-当你配置了大量 MCP 服务器时，旧版本会把所有工具描述一次性加载到上下文窗口，浪费大量 token。v2.1.45+ 引入了 **ToolSearch 懒加载机制**——只有在需要时才加载对应工具。
+当你配置了大量 MCP 服务器时，旧版本会把所有工具描述一次性加载到上下文窗口，浪费大量 token。v2.1.52+ 引入了 **ToolSearch 懒加载机制**——只有在需要时才加载对应工具。
 
 **使用方式**（自动生效，无需配置）：
 
@@ -2285,9 +2285,9 @@ npm publish --access public
 ---
 
 > 📌 **信息来源**：
-> - [MCP官方文档](https://modelcontextprotocol.io/) | 验证日期：2025-12-22
-> - [GitHub MCP Server仓库](https://github.com/modelcontextprotocol/servers) | 验证日期：2025-12-22
-> - [Claude Code文档](https://code.claude.com/docs/en/mcp) | 验证日期：2025-12-22
+> - [MCP官方文档](https://modelcontextprotocol.io/) | 验证日期：2026-02-25
+> - [GitHub MCP Server仓库](https://github.com/modelcontextprotocol/servers) | 验证日期：2026-02-25
+> - [Claude Code文档](https://code.claude.com/docs/en/mcp) | 验证日期：2026-02-25
 
 **作者**：老金
 **更新日期**：2026年2月25日

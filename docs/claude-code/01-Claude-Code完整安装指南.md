@@ -1099,7 +1099,7 @@ echo "分析这段代码" | claude -p
 │  • Use /exit to quit                                    │
 ╰─────────────────────────────────────────────────────────╯
 
-Claude Code v2.1.45
+Claude Code v2.1.52
 Working directory: /Users/yourname/projects/my-app
 
 You: █
@@ -1168,13 +1168,13 @@ claude
 ```
 ╭─────────────────────────────────────────────────────────╮
 │                                                         │
-│  Welcome to Claude Code v2.0                           │
+│  Welcome to Claude Code v2.1                           │
 │                                                         │
 │  • Type /help to see available commands                │
 │  • Use /exit to quit                                    │
 ╰─────────────────────────────────────────────────────────╯
 
-Claude Code v2.1.45
+Claude Code v2.1.52
 Working directory: /你的当前目录
 
 You: █
@@ -2366,7 +2366,7 @@ claude
 
 ```
 ╭─────────────────────────────────────────╮
-│  Welcome to Claude Code v2.0           │
+│  Welcome to Claude Code v2.1           │
 │  • Type /help to see available commands │
 ╰─────────────────────────────────────────╯
 

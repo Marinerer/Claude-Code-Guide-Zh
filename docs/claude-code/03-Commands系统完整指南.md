@@ -765,7 +765,7 @@ $ARGUMENTS 格式：<主题> [风格] [字数]
 
 #### 基础工具调用
 
-````markdown
+```markdown
 ## 执行步骤
 
 ### 步骤1：读取配置文件
@@ -785,7 +785,7 @@ Grep("TODO|FIXME", path="src/", type="py")
 ```bash
 npm run test
 ```
-````
+```
 
 #### MCP工具调用
 
@@ -797,9 +797,9 @@ npm run test
 >
 > **命名规则**：`mcp__服务器名__工具名` 比如 `mcp__mcp-router__search` 就是调用mcp-router服务器的search工具。
 >
-> **详细教程**：MCP的安装和配置请见「04-MCP系统完整指南」。
+> **详细教程**：MCP的安装和配置请见「04-MCP集成完整指南」。
 
-````markdown
+```markdown
 ## MCP工具使用
 
 ### 搜索最新信息
@@ -818,7 +818,7 @@ mcp__mcp-router__trending(
     max_results=20
 )
 ```
-````
+```
 
 ### 4.6 条件逻辑设计
 
@@ -1029,7 +1029,7 @@ You: /write Claude Code入门
 
 #### 在命令中调用其他命令
 
-````markdown
+```markdown
 # 每日工作流命令
 
 ## 执行步骤
@@ -1054,7 +1054,7 @@ You: /write Claude Code入门
 ```
 执行 /pre-check
 ```
-````
+```
 
 #### 创建工作流命令
 
@@ -1123,7 +1123,7 @@ argument-hint: <热点关键词>
 
 **在命令中引用模块**：
 
-````markdown
+```markdown
 # 文章创作命令
 
 ## 步骤1：加载写作规范
@@ -1134,7 +1134,7 @@ Read(".claude/modules/writing-style.md")
 
 ## 步骤2：按规范创作
 遵循加载的写作规范，创作文章...
-````
+```
 
 ### 5.4 社区命令资源
 
@@ -1382,12 +1382,12 @@ argument-hint: <主题> [--style=formal]
 
 直接调用MCP工具函数：
 
-````markdown
+```markdown
 ## 搜索信息
 ```
 mcp__mcp-router__search(query="$ARGUMENTS")
 ```
-````
+```
 
 ---
 
@@ -1561,7 +1561,7 @@ argument-hint: <姓名>
 
 **参考答案**：
 
-````markdown
+```markdown
 ---
 description: 代码审查命令 - 检查代码质量和潜在问题
 argument-hint: <文件路径>
@@ -1632,7 +1632,7 @@ Read("$ARGUMENTS")
 代码亮点：
 - [亮点1]
 ```
-````
+```
 
 **测试**：
 
@@ -1656,7 +1656,7 @@ Read("$ARGUMENTS")
 
 **参考答案**：
 
-````markdown
+```markdown
 ---
 description: 每日内容创作工作流 - 从热点到成稿一站式完成
 argument-hint: [热点关键词（可选）]
@@ -1732,7 +1732,7 @@ allowed-tools:
 2. [标题2]
 3. [标题3]
 ```
-````
+```
 
 **测试**：
 
@@ -1795,7 +1795,7 @@ author: 作者名
 
 ### 命令文件模板
 
-````markdown
+```markdown
 ---
 description: 一句话描述命令功能
 argument-hint: <参数说明>
@@ -1827,7 +1827,7 @@ allowed-tools:
 ```
 [输出模板]
 ```
-````
+```
 
 ---
 

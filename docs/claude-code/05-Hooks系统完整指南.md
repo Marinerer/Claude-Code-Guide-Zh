@@ -578,7 +578,7 @@ echo '{"tool_name": "Write", "tool_input": {"file_path": "test.txt"}}' | python 
 
 **接下来可以**：
 
-- 继续学习6种Hook类型（第三部分）
+- 继续学习8种Hook类型（第三部分）
 - 学习实战应用场景（第四部分）
 - 遇到问题查看故障排查（第五部分）
 
@@ -2499,7 +2499,7 @@ exit 0
 通过本课学习，你已经掌握：
 
 1. **Hooks核心概念**：理解Hook是什么、为什么需要、能做什么
-2. **6种Hook类型**：PreToolUse、PostToolUse、UserPromptSubmit等全部类型
+2. **8种Hook类型**：PreToolUse、PostToolUse、UserPromptSubmit、Notification、Stop、SessionStart、WorktreeCreate、WorktreeRemove全部类型
 3. **配置方法**：settings.json配置格式、Matcher语法、timeout设置
 4. **实战场景**：Git自动化、代码格式化、文件保护、质量检查
 5. **故障排查**：常见问题诊断和解决方法

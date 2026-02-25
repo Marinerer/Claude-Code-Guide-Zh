@@ -152,7 +152,7 @@ Plugin = Commands + Skills + Hooks + MCP配置 + 文档
 **官方数据**:
 
 - **发布时间**:2025年10月9日
-- **当前版本**:Claude Code v2.1.12（2025年1月17日发布）
+- **当前版本**:Claude Code v2.1.52（2026年2月验证）
 - **社区Plugin数量**:持续增长中（来源:Jeremy Longshore维护的claude-code-plugins-plus）
 - **官方Marketplace**:✅ 已上线（code.claude.com/plugins）
 - **自动更新**:✅ 支持（启动时自动检查）
@@ -199,7 +199,7 @@ Plugin = Commands + Skills + Hooks + MCP配置 + 文档
 ```bash
 # 1. 确认Claude Code已安装
 claude --version
-# 预期输出:claude-code/2.1.12 或更高版本（2025年1月后）
+# 预期输出:claude-code/2.1.52 或更高版本
 
 # 2. 确认在项目目录中
 cd /path/to/your/project
@@ -2097,9 +2097,8 @@ claude plugins profile report my-plugin
 
 | 资源 | 链接 | 说明 |
 |------|------|------|
-| **上一节** | [IDE插件配置优化](./IDE插件配置优化.md) | VS Code/Cursor集成 |
-| **下一节** | [交互模式高级工作流](./交互模式高级工作流.md) | Plan Mode深入 |
-| **GitHub示例** | [github.com/yourname/claude-plugins-examples](https://github.com) | 完整示例代码 |
+| **上一节** | [06-Skills定制完整指南](./06-Skills定制完整指南.md) | 创建可复用功能包 |
+| **下一节** | [08-Agent-SDK完整指南](./08-Agent-SDK完整指南.md) | 编程开发AI Agent |
 
 ---
 

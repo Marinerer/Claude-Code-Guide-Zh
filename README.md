@@ -5,7 +5,7 @@
 ![GitHub stars](https://img.shields.io/github/stars/KimYx0207/Claude-Code-x-OpenClaw-Guide-Zh?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/KimYx0207/Claude-Code-x-OpenClaw-Guide-Zh?style=social)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Claude Code](https://img.shields.io/badge/Claude_Code-2.1.45-green.svg)
+![Claude Code](https://img.shields.io/badge/Claude_Code-2.1.52-green.svg)
 ![OpenClaw](https://img.shields.io/badge/OpenClaw-v2026.2.23-blue.svg)
 
 **AI 双顶流 · 中文教程扛把子**
@@ -82,7 +82,7 @@
 - **👶 小白友好**：72个术语解释、40个生活类比、170+FAQ
 - **💻 实战导向**：70+个可运行代码示例，边学边练
 - **📊 质量保证**：所有教程经 WebSearch 验证，信息准确可靠
-- **🔄 持续更新**：适配最新版本（Claude Code 2.1.45 / OpenClaw v2026.2.23）
+- **🔄 持续更新**：适配最新版本（Claude Code 2.1.52 / OpenClaw v2026.2.23）
 
 ---
 
@@ -186,13 +186,13 @@ Week 8  ：OpenClaw 多Agent + Docker部署 + 安全
 
 | 指标 | 数值 |
 |------|------|
-| **教程总数** | 21 个（Claude Code 10+1 / OpenClaw 11） |
+| **教程总数** | 21 篇完整教程（Claude Code 10 / OpenClaw 11）+ 1 速查卡 |
 | **总字数** | ~130,000 字 |
 | **代码示例** | 70+个（全部可运行） |
 | **FAQ数量** | 170+ 个 |
 | **覆盖AI模型** | 29 个提供商（OpenClaw） |
 | **覆盖消息平台** | 30+ 个（OpenClaw） |
-| **Claude Code版本** | 2.1.45（2026-02-25 验证） |
+| **Claude Code版本** | 2.1.52（2026-02-25 验证） |
 | **OpenClaw版本** | v2026.2.23（2026-02-24 验证） |
 
 ---
@@ -280,11 +280,11 @@ Week 8  ：OpenClaw 多Agent + Docker部署 + 安全
 - 04-MCP集成新增 MCP Apps 交互式界面、工具懒加载 ToolSearch（上下文减少 95%）、远程 MCP 服务器
 - README 联系方式新增 X(Twitter) 和微信公众号信息
 
-### v2.0 (2026-02-25) — 适配 Claude Code 2.1.45
+### v2.0 (2026-02-25) — 适配 Claude Code 2.1.52
 
 **版本同步更新**
 - 全部 10 篇教程版本号从 v2.0+ 更新至 v2.1+，验证日期更新至 2026-02-25
-- README 版本徽章从 2.1.19 更新至 2.1.45
+- README 版本徽章从 2.1.19 更新至 2.1.52
 - 移除 Node.js 环境依赖要求（Claude Code 已切换原生安装）
 
 **新增内容**
@@ -297,7 +297,7 @@ Week 8  ：OpenClaw 多Agent + Docker部署 + 安全
 
 **修复与优化**
 - 修复快速导航卡中"安装Node.js"的过时描述，改为"原生安装Claude Code"
-- 修复 02-基础使用教程中版本号示例（v2.0.71 → v2.1.45）
+- 修复 02-基础使用教程中版本号示例（v2.0.71 → v2.1.52）
 - 清理 06/09/10 教程中 23 处 "2.10+/2.1.0+" 旧版本标记
 
 **GitHub Issues**
@@ -307,7 +307,7 @@ Week 8  ：OpenClaw 多Agent + Docker部署 + 安全
 **已完成（原待办项）**
 - ✅ 08-Agent-SDK 新增 3.5 节：Task 工具与子代理编排（CLI 内置 Subagent 系统）
 - ✅ 02-基础使用 /permissions 节新增权限模式切换、allowedTools 配置说明
-- ✅ 04-MCP集成 新增 MCP Apps、工具懒加载（v2.1.45+）、远程 MCP 服务器说明
+- ✅ 04-MCP集成 新增 MCP Apps、工具懒加载（v2.1.52+）、远程 MCP 服务器说明
 
 ### v1.0 (2026-02-11) — 初始发布
 
@@ -319,7 +319,7 @@ Week 8  ：OpenClaw 多Agent + Docker部署 + 安全
 
 ## ⚠️ 免责声明
 
-- Claude Code 教程基于 2.1.45 版本编写，OpenClaw 教程基于 v2026.2.23 版本编写（持续更新中）
+- Claude Code 教程基于 2.1.52 版本编写，OpenClaw 教程基于 v2026.2.23 版本编写（持续更新中）
 - 部分功能可能随版本更新而变化，请以官方文档为准
 - 使用本教程产生的任何问题，作者不承担责任
 
