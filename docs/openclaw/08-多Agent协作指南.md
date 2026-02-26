@@ -251,7 +251,7 @@ Agent 的核心配置在 `~/.openclaw/openclaw.json`（JSON5 格式）的 `agent
       {
         "agentId": "social",
         "workspace": "~/.openclaw/workspace-social",
-        "model": "openai:gpt-4o",
+        "model": "openai:gpt-5.2",
         "temperature": 0.9,
         "skills": {
           "enabled": ["summarize", "weather", "goplaces"],
@@ -413,7 +413,7 @@ Agent 的核心配置在 `~/.openclaw/openclaw.json`（JSON5 格式）的 `agent
       },
       {
         "agentId": "social",
-        "model": "openai:gpt-4o-mini",
+        "model": "openai:gpt-5.2-mini",
         // 闲聊不需要太强的模型，用便宜的就行
       },
       {
@@ -432,7 +432,7 @@ Agent 的核心配置在 `~/.openclaw/openclaw.json`（JSON5 格式）的 `agent
 |------|------|-----------|
 | 全部用 Opus | claude-opus-4-6 | ~$5-10 |
 | 按需分配 | Opus + Sonnet + Mini | ~$2-4 |
-| 全部用 Mini | gpt-4o-mini | ~$0.5-1 |
+| 全部用 Mini | gpt-5.2-mini | ~$0.5-1 |
 
 按需分配能在保证关键任务质量的同时，大幅降低成本。
 
@@ -751,7 +751,7 @@ openclaw agents list
       {
         "agentId": "social",
         "skills": { "enabled": ["weather", "goplaces", "summarize"] },
-        "model": "openai:gpt-4o-mini",
+        "model": "openai:gpt-5.2-mini",
         "temperature": 0.9,
       },
     ],
@@ -927,7 +927,7 @@ openclaw agents add tech-support
       {
         "agentId": "community",
         "workspace": "~/.openclaw/workspace-community",
-        "model": "openai:gpt-4o-mini",
+        "model": "openai:gpt-5.2-mini",
         "temperature": 0.8,
         "skills": {
           "enabled": ["summarize"],
@@ -963,7 +963,7 @@ openclaw agents add tech-support
 
 **效果：**
 
-- #general 频道的消息由 community Agent 处理，用便宜的 GPT-4o-mini，回复轻松友好
+- #general 频道的消息由 community Agent 处理，用便宜的 GPT-5.2-mini，回复轻松友好
 - #support 频道的消息由 tech-support Agent 处理，用更强的 Claude Sonnet，回复专业精准
 - 私聊消息由 main Agent 处理
 
@@ -1353,7 +1353,7 @@ openclaw sessions cleanup
     "list": [
       {
         "agentId": "social",
-        "model": "openai:gpt-4o-mini",
+        "model": "openai:gpt-5.2-mini",
         // 闲聊用便宜模型，每条消息成本降低 10 倍
       },
     ],
@@ -1387,7 +1387,7 @@ openclaw sessions cleanup
   "models": {
     "primary": "anthropic:claude-sonnet-4-6",
     "fallback": [
-      "openai:gpt-4o-mini",
+      "openai:gpt-5.2-mini",
       "ollama:llama3.1",
     ],
   },
@@ -1633,7 +1633,7 @@ openclaw gateway --verbose --agent-debug
 [AGENT] Loading MEMORY.md (tokens: 150)
 [AGENT] Loading skills: weather, goplaces, summarize
 [AGENT] Total system prompt tokens: 1,850
-[AGENT] Calling model: openai:gpt-4o-mini
+[AGENT] Calling model: openai:gpt-5.2-mini
 [AGENT] Model response received (tokens: 120, time: 1.2s)
 [AGENT] Sending response to telegram:chat=-100123456789
 ```

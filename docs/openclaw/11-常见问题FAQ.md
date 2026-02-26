@@ -172,7 +172,7 @@ npm install -g windows-build-tools
 
 # 方案二：跳过引导，手动配置
 openclaw config set providers.openai.apiKey "sk-proj-xxxxx"
-openclaw config set providers.openai.model "gpt-4o"
+openclaw config set providers.openai.model "gpt-5.2"
 openclaw gateway start
 
 # 方案三：检查配置文件是否损坏
@@ -220,7 +220,7 @@ openclaw config set providers.anthropic.apiKey "sk-ant-xxxxx"
 openclaw config set providers.google.apiKey "AIzaSy-xxxxx"
 
 # 设置默认模型
-openclaw config set defaultModel "openai:gpt-4o"
+openclaw config set defaultModel "openai:gpt-5.2"
 
 # 也可以通过环境变量配置（优先级高于配置文件）
 export OPENAI_API_KEY="sk-proj-xxxxx"
@@ -502,7 +502,7 @@ openclaw sessions list
 
 # 第四步：优化措施
 # 使用更快的模型
-openclaw config set defaultModel "openai:gpt-4o-mini"
+openclaw config set defaultModel "openai:gpt-5.2-mini"
 # 启用流式响应
 openclaw config set streaming.enabled true
 # 减少系统提示词长度（Token 越少，响应越快）
@@ -600,7 +600,7 @@ openclaw channels list
 
 ### Q25: 消息中的图片/文件 AI 能处理吗？
 
-**说明：** 取决于你使用的模型。支持多模态的模型（如 GPT-4o、Claude 3.5 Sonnet）可以处理图片。
+**说明：** 取决于你使用的模型。支持多模态的模型（如 GPT-5.2、Claude Sonnet 4.6）可以处理图片。
 
 ```bash
 # 启用多模态支持
@@ -659,7 +659,7 @@ openclaw gateway restart
 # 方案一：启用模型故障转移（推荐）
 # 主模型被限流时自动切换到备用模型
 openclaw config set fallback.enabled true
-openclaw config set fallback.models '["openai:gpt-4o","anthropic:claude-sonnet-4-20250514","openai:gpt-4o-mini"]'
+openclaw config set fallback.models '["openai:gpt-5.2","anthropic:claude-sonnet-4-20250514","openai:gpt-5.2-mini"]'
 
 # 方案二：配置请求重试
 openclaw config set retry.maxRetries 3
@@ -667,7 +667,7 @@ openclaw config set retry.retryDelay 2000  # 毫秒
 
 # 方案三：使用 OpenRouter（聚合多个提供商，限流更宽松）
 openclaw config set providers.openrouter.apiKey "sk-or-xxxxx"
-openclaw config set defaultModel "openrouter:openai/gpt-4o"
+openclaw config set defaultModel "openrouter:openai/gpt-5.2"
 ```
 
 ### Q28: 模型回复很慢
@@ -680,8 +680,8 @@ openclaw config set defaultModel "openrouter:openai/gpt-4o"
 
 ```bash
 # 方案一：换用更快的小模型
-openclaw config set defaultModel "openai:gpt-4o-mini"
-# gpt-4o-mini 速度是 gpt-4o 的 3-5 倍，日常对话足够用
+openclaw config set defaultModel "openai:gpt-5.2-mini"
+# gpt-5.2-mini 速度是 gpt-5.2 的 3-5 倍，日常对话足够用
 
 # 方案二：启用流式响应（边生成边发送）
 openclaw config set streaming.enabled true
@@ -718,8 +718,8 @@ openclaw config set context.maxTokens 8000
 openclaw config set context.strategy "sliding-window"
 
 # 方案二：使用上下文窗口更大的模型
-# GPT-4o: 128K tokens
-# Claude 3.5 Sonnet: 200K tokens
+# GPT-5.2: 1M tokens
+# Claude Sonnet 4.6: 200K tokens
 # Gemini 1.5 Pro: 1M tokens
 openclaw config set defaultModel "anthropic:claude-sonnet-4-20250514"
 
@@ -782,7 +782,7 @@ openclaw config set modelParams.topP 0.9
 # 方案四：混合策略 — 简单任务用本地模型，复杂任务用云端
 openclaw config set routing.rules '[
   {"condition": "message.length < 100", "model": "ollama:llama3.1:8b"},
-  {"condition": "default", "model": "openai:gpt-4o"}
+  {"condition": "default", "model": "openai:gpt-5.2"}
 ]'
 ```
 
@@ -818,9 +818,9 @@ openclaw config set defaultModel "deepseek:deepseek-chat"
 # 配置 Fallback 链
 openclaw config set fallback.enabled true
 openclaw config set fallback.models '[
-  "openai:gpt-4o",
+  "openai:gpt-5.2",
   "anthropic:claude-sonnet-4-20250514",
-  "openai:gpt-4o-mini"
+  "openai:gpt-5.2-mini"
 ]'
 
 # 配置超时时间（超过这个时间就切换到下一个模型）
@@ -840,8 +840,8 @@ openclaw config set budget.dailyLimit 5.00   # 美元
 openclaw config set budget.monthlyLimit 100.00
 
 # 方案二：使用更便宜的模型
-# gpt-4o-mini 价格是 gpt-4o 的 1/10
-openclaw config set defaultModel "openai:gpt-4o-mini"
+# gpt-5.2-mini 价格是 gpt-5.2 的 1/10
+openclaw config set defaultModel "openai:gpt-5.2-mini"
 
 # 方案三：限制上下文长度（减少 Token 消耗）
 openclaw config set context.maxTokens 4000
@@ -861,11 +861,11 @@ openclaw config set defaultModel "ollama:llama3.1:8b"
 ```bash
 # 为特定 Agent 配置模型
 openclaw agents set-identity coding-assistant --model "anthropic:claude-sonnet-4-20250514"
-openclaw agents set-identity casual-chat --model "openai:gpt-4o-mini"
+openclaw agents set-identity casual-chat --model "openai:gpt-5.2-mini"
 
 # 为特定 Channel 配置模型
-openclaw config set channels.telegram.defaultModel "openai:gpt-4o"
-openclaw config set channels.whatsapp.defaultModel "openai:gpt-4o-mini"
+openclaw config set channels.telegram.defaultModel "openai:gpt-5.2"
+openclaw config set channels.whatsapp.defaultModel "openai:gpt-5.2-mini"
 ```
 
 ---
@@ -1523,7 +1523,7 @@ openclaw gateway start
 
 # 方案二：使用 OpenRouter（一个 Key 用所有模型）
 openclaw config set providers.openrouter.apiKey "sk-or-xxxxx"
-openclaw config set defaultModel "openrouter:openai/gpt-4o"
+openclaw config set defaultModel "openrouter:openai/gpt-5.2"
 
 # 方案三：使用国产模型（不需要代理）
 openclaw config set providers.deepseek.apiKey "sk-xxxxx"
@@ -1707,7 +1707,7 @@ openclaw skills check my-awesome-skill --input "测试"
 openclaw agents set-identity default --systemPrompt "你是一个中文 AI 助手，请始终用中文回复。"
 ```
 
-大多数主流模型（GPT-4o、Claude、Gemini）都支持中文。本地模型推荐用 Qwen（通义千问）系列，中文能力最好。
+大多数主流模型（GPT-5.2、Claude、Gemini）都支持中文。本地模型推荐用 Qwen（通义千问）系列，中文能力最好。
 
 ### Q75: 一台机器能跑多个 OpenClaw 实例吗？
 

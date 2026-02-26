@@ -97,11 +97,12 @@
 | 03 | [Commands系统完整指南](docs/claude-code/03-Commands系统完整指南.md) | 4-6h | ⭐⭐ | ⭐⭐ | 自定义Slash命令、工作流组合 |
 | 04 | [MCP集成完整指南](docs/claude-code/04-MCP集成完整指南.md) | 4-6h | ⭐⭐ | ⭐⭐⭐ | 10+核心服务器、自定义开发 |
 | 05 | [Hooks系统完整指南](docs/claude-code/05-Hooks系统完整指南.md) | 4-6h | ⭐⭐ | ⭐⭐⭐ | 8种Hook类型（含Worktree管理）、自动化工作流 |
-| 06 | [Skills定制完整指南](docs/claude-code/06-Skills定制完整指南.md) | 6-8h | ⭐⭐ | ⭐⭐ | 创建可复用功能包 |
-| 07 | [Plugins生态完整指南](docs/claude-code/07-Plugins生态完整指南.md) | 4-6h | ⭐⭐ | ⭐ | Marketplace浏览与安装 |
-| 08 | [Agent-SDK完整指南](docs/claude-code/08-Agent-SDK完整指南.md) | 6-8h | ⭐⭐⭐ | ⭐⭐ | 编程开发AI Agent |
-| 09 | [综合实战完整指南](docs/claude-code/09-综合实战完整指南.md) | 2-3h | ⭐⭐⭐ | ⭐⭐ | 团队协作、CI/CD集成 |
-| 10 | [企业实战完整指南](docs/claude-code/10-企业实战完整指南.md) | 待定 | ⭐⭐⭐ | ⭐ | 企业级最佳实践 |
+| 06 | [Subagent子代理完整指南](docs/claude-code/06-Subagent子代理完整指南.md) | 1-2h | ⭐⭐ | ⭐⭐ | 100+专家代理一键扩展 |
+| 07 | [Skills定制完整指南](docs/claude-code/07-Skills定制完整指南.md) | 6-8h | ⭐⭐ | ⭐⭐ | 创建可复用功能包 |
+| 08 | [Plugins生态完整指南](docs/claude-code/08-Plugins生态完整指南.md) | 4-6h | ⭐⭐ | ⭐ | Marketplace浏览与安装 |
+| 09 | [Agent-SDK完整指南](docs/claude-code/09-Agent-SDK完整指南.md) | 6-8h | ⭐⭐⭐ | ⭐⭐ | 编程开发AI Agent |
+| 10 | [综合实战完整指南](docs/claude-code/10-综合实战完整指南.md) | 2-3h | ⭐⭐⭐ | ⭐⭐ | 团队协作、CI/CD集成 |
+| 11 | [企业实战完整指南](docs/claude-code/11-企业实战完整指南.md) | 待定 | ⭐⭐⭐ | ⭐ | 企业级最佳实践 |
 
 **速查**：[Claude Code 快速导航卡](docs/claude-code/快速导航卡.md)
 
@@ -220,12 +221,12 @@ Week 8  ：OpenClaw 多Agent + Docker部署 + 安全
 
 ### 进阶者（有基础）
 
-- Claude Code 重点：04-MCP、05-Hooks、06-Skills
+- Claude Code 重点：04-MCP、05-Hooks、06-Subagent、07-Skills
 - OpenClaw 重点：06-技能系统、08-多Agent路由
 
 ### 高级者（深度定制）
 
-- Claude Code：08-Agent-SDK、09-综合实战
+- Claude Code：09-Agent-SDK、10-综合实战
 - OpenClaw：08-多Agent、09-Docker部署、10-安全
 
 ---

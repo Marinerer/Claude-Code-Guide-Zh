@@ -467,7 +467,7 @@ sk-ant-api03-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
      -H "anthropic-version: 2023-06-01" \
      -H "content-type: application/json" \
      -d '{
-       "model": "claude-sonnet-4-5-20250929",
+       "model": "claude-sonnet-4-6-20250929",
        "max_tokens": 1024,
        "messages": [{"role": "user", "content": "Hello"}]
      }'
@@ -483,7 +483,7 @@ sk-ant-api03-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
        "anthropic-version" = "2023-06-01"
        "content-type" = "application/json"
    }
-   $body = '{"model":"claude-sonnet-4-5-20250929","max_tokens":1024,"messages":[{"role":"user","content":"Hello"}]}'
+   $body = '{"model":"claude-sonnet-4-6-20250929","max_tokens":1024,"messages":[{"role":"user","content":"Hello"}]}'
    Invoke-RestMethod -Uri "https://api.anthropic.com/v1/messages" -Method POST -Headers $headers -Body $body
    ```
 

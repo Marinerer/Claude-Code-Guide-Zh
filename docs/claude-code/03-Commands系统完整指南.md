@@ -498,7 +498,7 @@ allowed-tools:
   - Read
   - Write
   - WebSearch
-model: claude-sonnet-4-5-20250929
+model: claude-sonnet-4-6-20250929
 ---
 
 # 公众号文章创作
@@ -600,7 +600,7 @@ allowed-tools:
   - Grep
 
 # 指定使用的模型
-model: claude-sonnet-4-5-20250929
+model: claude-sonnet-4-6-20250929
 
 # 禁用模型调用（用于纯文本替换命令）
 # disable-model-invocation: true
@@ -1787,7 +1787,7 @@ allowed-tools:
   - WebSearch
   - Glob
   - Grep
-model: claude-sonnet-4-5-20250929
+model: claude-sonnet-4-6-20250929
 version: 1.0.0
 author: 作者名
 ---

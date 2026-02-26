@@ -590,7 +590,7 @@ OpenClaw 支持 29+ AI 模型提供商，这是它的核心竞争力之一。你
 
 | 提供商 | 代表模型 | 特点 |
 |--------|----------|------|
-| OpenAI | GPT-5.3, GPT-4o | 最强通用能力，OpenClaw 赞助商 |
+| OpenAI | GPT-5.2 | 最强通用能力，OpenClaw 赞助商 |
 | Anthropic | Claude Opus 4.6, Sonnet 4.6 | 官方推荐，编程和安全最强 |
 | Google | Gemini 3.1 | 多模态能力强 |
 | Mistral | Mistral Large | 欧洲开源模型 |

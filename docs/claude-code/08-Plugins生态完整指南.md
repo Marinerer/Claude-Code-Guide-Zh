@@ -657,8 +657,8 @@ alias claude='claude --plugin-dir ~/.claude/global-plugins/my-plugin'
 
 | 资源 | 链接 | 说明 |
 |------|------|------|
-| **上一节** | [06-Skills定制完整指南](./06-Skills定制完整指南.md) | 创建可复用功能包 |
-| **下一节** | [08-Agent-SDK完整指南](./08-Agent-SDK完整指南.md) | 编程开发AI Agent |
+| **上一节** | [07-Skills定制完整指南](./07-Skills定制完整指南.md) | 创建可复用功能包 |
+| **下一节** | [09-Agent-SDK完整指南](./09-Agent-SDK完整指南.md) | 编程开发AI Agent |
 
 ---
 
